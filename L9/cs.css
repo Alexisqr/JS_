@@ -1,0 +1,28 @@
+
+table {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+td {
+  padding:5px;
+
+  padding-right: 90px;
+  border: 1px solid lightgray;
+}
+
+th {
+  padding: 5px;
+  border: 1px solid black;
+}
+.tr{
+border-color: green;
+background-color: green;
+}
+.fl{
+	border-color: red;
+	background-color:red;
+}
+.r6{
+	text-decoration:line-through;
+}
