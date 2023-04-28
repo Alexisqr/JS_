@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+		<script src="app.js"></script>
+	
+	</head>
+	<body ng-controller="MyController">
+		<h3>Завдання 1</h3>
+		<span ng-repeat="nums in num">{{nums+3}} ,</span>
+		<h3>Завдання 2</h3>
+		<span ng-repeat="nums in num2">{{nums*nums}} ,</span>
+		<h3>Завдання 3</h3>
+		<ul>
+			<li ng-repeat="nums in num3">{{nums}}</li>
+		</ul>
+		<button ng-click="por3()">Reverse</button>
+		<h3>Завдання 4</h3>
+		
+		<ul>
+			<li ng-repeat="nums in num4">{{nums}}</li>
+		</ul>
+		<button ng-click="por4()">sort</button>
+		<h3 id="5">Завдання 5</h3>
+		<ul>
+			<li ng-repeat="nums in movs5">{{nums}}</li>
+		</ul>
+		<button ng-click="por5()">+</button>
+		<h3 id="6" >Завдання 6</h3>
+		<ul>
+			<li ng-repeat="user in users1">{{ user }}</li>
+		  </ul>
+		  <ul>
+			<li ng-repeat="user in users2">{{ user }}</li>
+		  </ul>
+		  <button ng-click="add()">Додати користувача</button>
+		<h3 id="7">Завдання 7</h3>
+		<table>
+			<tr ng-repeat="row in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]">
+			  <td ng-repeat="col in row">{{col}}</td>
+			</tr>
+		  </table>		
+		<h3 id="8">Завдання 8</h3>
+		<ul>
+			<li ng-repeat="(country, cities) in workers">
+				<span>{{country}}:</span>
+				<span ng-repeat="city in cities">{{city}} </span>
+			</li>
+		</ul>
+		
+	</body>
+</html>

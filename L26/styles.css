@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+  }
+  
+  td {
+    padding:5px;
+  
+    padding-right: 90px;
+    border: 1px solid lightgray;
+  }
+  
+  th {
+    padding: 5px;
+    border: 1px solid black;
+  }
