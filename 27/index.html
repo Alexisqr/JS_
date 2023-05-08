@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+		<script src="app.js"></script>
+	
+	</head>
+	<body ng-controller="MyController">
+		<h3>Завдання 1</h3>
+		<input type="number" ng-model="num" ng-change="calculateSquare()">
+        <p>Square of the number: {{square}}</p>
+		<h3>Завдання 2</h3>
+		<input ng-model="num2" ng-blur="showSquare()">
+        <p>Square of the number: {{square2}}</p>
+
+		<h3>Завдання 3</h3>
+		<input ng-model="newNum" ng-blur="addNum()">
+		<ul>
+			<li ng-repeat="num in nums">{{num}}</li>
+		</ul>
+
+		<button ng-click="por3()">Reverse</button>
+		<h3>Завдання 4</h3>
+		<a href="#" ng-click="changeCheck2()">Зробити чекбокс відмічиним</a>
+		<a href="#" ng-click="changeCheck()">Зробити чекбокс невідмічиним</a>
+		
+		<input type="checkbox" ng-checked="check">
+
+		<h3 id="5">Завдання 5</h3>
+		<a href="#" ng-click="changeCheck3()">Зробити чекбокс відмічиним</a>
+		
+		<input type="checkbox" ng-checked="check3">
+		<h3 id="6" >Завдання 6</h3>
+		<input type="checkbox" ng-checked="check4" ng-click="changeCheck4()" >
+		<input type="checkbox" ng-checked="check5" ng-click="changeCheck5()">
+		<h3 id="7">Завдання 7</h3>
+		<ul>
+			<li ng-repeat="(key, value) in courses">
+			  <input type="checkbox" ng-model="courses[key]"> {{key}}
+			</li>
+		  </ul>	
+		
+	</body>
+</html>
