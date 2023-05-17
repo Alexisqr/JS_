@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+		<script src="app.js"></script>
+		<style>
+			.red {
+				color: red;
+			}
+			.lin {
+				text-decoration: line-through;
+			}
+			 </style>
+	
+	</head>
+	<body ng-controller="MyController">
+		<h3>Завдання 1</h3>		
+		<input type="checkbox" ng-model="isChecked">
+		<p ng-show="isChecked">Цей абзац буде показуватися, якщо чекбокс відзначений.</p>
+	
+		<h3>Завдання 2</h3>
+		<input type="checkbox" ng-model="isChecked2" ng-init="isChecked2 = true">
+		<p ng-show="isChecked2">Цей абзац буде показуватися, якщо чекбокс відзначений.</p>
+		<h3>Завдання 3</h3>
+		<a href="#" ng-click="showParagraph()">Перше посилання</a>
+		<a href="#" ng-click="hideParagraph()">Друге посилання</a>
+
+<p ng-hide="isParagraphVisible">Це абзац, який можна приховати та показати.</p>
+		<h3>Завдання 4</h3>
+		<a href="#" ng-click="hideParagraph2()">Друге посилання</a>
+
+<p ng-hide="isParagraphVisible2">Це абзац, який можна приховати та показати.</p>
+		<h3 id="5">Завдання 5</h3>
+		
+			<input type="checkbox" ng-model="checkbox1">
+		 
+		  <p ng-show="checkbox1">Це абзац, який з'явиться при вибраному Чекбоксі 1.</p>
+		
+		
+			<input type="checkbox" ng-model="checkbox2">
+		 
+		  <p ng-show="checkbox2">Це абзац, який з'явиться при вибраному Чекбоксі 2.</p>
+
+		  <input type="checkbox" ng-model="checkbox3">
+		 
+		  <p ng-show="checkbox3">Це абзац, який з'явиться при вибраному Чекбоксі 3.</p>
+		
+		
+			<input type="checkbox" ng-model="checkbox4">
+		 
+		  <p ng-show="checkbox4">Це абзац, який з'явиться при вибраному Чекбоксі 4.</p>
+		<h3 id="6" >Завдання 6</h3>
+		<input type="checkbox" ng-model="check">
+		<p ng-class="{red: check}">Абзац з текстом.</p>
+		<h3 id="7" >Завдання 7</h3>
+		<input type="checkbox" ng-model="check3">
+		<input type="checkbox" ng-model="check2">
+		<p ng-class="{red: check3,lin:check2}">Абзац з текстом.</p>
+		<h3 id="8" >Завдання 8</h3>
+		<select ng-model="selectedCountry" ng-options="country for country in countries"></select>
+		<h3 id="9" >Завдання 9</h3>
+		<select ng-model="selectedCity" ng-options="city.name for city in cities"></select>
+        <input type="text" ng-model="selectedCity.name" />
+        <h3 id="10" >Завдання 10</h3>
+		<select ng-model="selectedCountry2" ng-options="country2.name for country2 in countries2" ng-change="selectCountry2(selectedCountry2)">
+			
+		</select>
+		<select ng-model="selectedCity2" ng-options="city2.name for city2 in selectedCountry2.cities2">
+			<option value="">Виберіть місто</option>
+		</select>
+	</body>
+</html>
