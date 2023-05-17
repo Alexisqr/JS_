@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+		<script src="app.js"></script>
+	
+	</head>
+	<body ng-controller="MyController">
+		<h3>Завдання 1</h3>		
+		<ul>
+			<li ng-repeat="num in nums">{{num}}</li>
+		</ul>
+		<input ng-model="newNum" ng-blur="addNum()">
+		<button ng-click="addNum()">Reverse</button>
+		<h4>Del :</h4>
+		<input type="text" ng-model="delIndex">
+		<button ng-click="delNum()">Delete</button>
+		<h3>Завдання 2</h3>
+		<ul>
+			<li ng-repeat="num in nums2">{{num}}</li>
+		</ul>
+		<input ng-model="newNum2" ng-blur="addNum2()">
+		<button ng-click="addNum2()">Reverse</button>
+		<h4>Del :</h4>
+		<input type="text" ng-model="delIndex2">
+		<button ng-click="delNum2()">Delete</button>
+		<h3>Завдання 3</h3>
+		<label><input type="checkbox" ng-model="searchP">Показувати країни з літерою 'п'</label>
+		<ul>
+			
+		  <li ng-repeat="country in countries | filter:search">{{country}}</li>
+		</ul>
+		<h3>Завдання 4</h3>
+		<input type="text" ng-model="inputValue" ng-change="updateCheckboxes()" placeholder="Enter checkbox numbers...">
+		<br>
+		<label><input type="checkbox" ng-model="checkboxes[0]"> Checkbox 1</label>
+		<br>
+		<label><input type="checkbox" ng-model="checkboxes[1]"> Checkbox 2</label>
+		<br>
+		<label><input type="checkbox" ng-model="checkboxes[2]"> Checkbox 3</label>
+		<h3 id="5">Завдання 5</h3>
+		<ul>
+			<li ng-repeat="user in users1">{{ user }}</li>
+		  </ul>
+		  <ul>
+			<li ng-repeat="user in users2">{{ user }}</li>
+		  </ul>
+		  <button ng-click="add()">Додати користувача</button>
+		<h3 id="6" >Завдання 6</h3>
+		<ul>
+			<li ng-repeat="num in numbers6 track by $index">{{num}}</li>
+		  </ul>
+		  <p>Сума: {{sum()}}</p>
+		  <input type="text" ng-model="newNumber6" placeholder="Введіть число">
+		  <button ng-click="addNumber6()">Додати</button>
+		
+	</body>
+</html>
